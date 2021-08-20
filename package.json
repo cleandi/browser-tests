@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -fr node_modules && rm package-lock.json",
     "test": "npm install && cp node_modules/cleandi/dist/index.js index.js && node test.js && echo OK"
   },
   "dependencies": {
