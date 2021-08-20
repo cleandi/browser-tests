@@ -1,0 +1,16 @@
+{
+  "name": "tdi-legacy-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install && cp node_modules/cleandi/dist/index.js index.js && node test.js && echo OK"
+  },
+  "dependencies": {
+    "cleandi": "latest",
+    "webdriverio": "^7.10.0",
+    "http-server": "^13.0.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
