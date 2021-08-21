@@ -10,7 +10,16 @@ server.listen(8080);
     try {
         const browser = await remote({
             capabilities: {
-                browserName: 'chrome'
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: [
+                        'headless',
+                        // Use --disable-gpu to avoid an error from a missing Mesa
+                        // library, as per
+                        // https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md
+                        'disable-gpu',
+                    ]
+                }
             }
         })
 
